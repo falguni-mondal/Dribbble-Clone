@@ -1,0 +1,418 @@
+@font-face {
+    font-family: 'mona';
+    src: url(Assets/Fonts/Mona-Sans.woff2);
+}
+@font-face {
+    font-family: 'sherif';
+    src: url(Assets/Fonts/unknown.woff2);
+}
+@font-face {
+    font-family: 'amaze';
+    src: url(Assets/Fonts/Franklin\ Gothic\ Demi.woff2);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'mona';
+}
+html, body{
+    height: 100vh;
+    width: 100vw;
+}
+#page{
+    width: 100%;
+    height: 100%;
+    background: #f8f7f4;
+    overflow-x: hidden;
+}
+#navbar{
+    height: 16%;
+    width: 100%;
+    padding: 0px 3vw 0px 3vw;
+    display: flex;
+    align-items: center;
+}
+.logo{
+    width: 7.2%;
+    margin-bottom: 8px;
+}
+.logo img{
+    width: 100%;
+    height: 100%;
+}
+#navbar nav{
+    margin-left: 2.8vw;
+}
+#navbar nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.29vw;
+}
+#navbar nav ul li{
+    list-style: none;
+}
+#navbar nav ul li a{
+    text-decoration: none;
+    font-size: 1.025vw;
+    font-weight: 600;
+    color: #0d0c22;
+    transition: all 0.3s;
+}
+#navbar nav ul li a:hover{
+    opacity: 0.7;
+}
+#navbar #log-on{
+    display: flex;
+    align-items: center;
+    gap: 1.7vw;
+    margin-left: 20vw;
+}
+#navbar #log-on form{
+    position: relative;
+}
+#navbar #log-on form input{
+    width: 17vw;
+    height: 3.5vw;
+    border: 0px;
+    border-radius: 200px;
+    padding-left: 3.3vw;
+    font-size: 1.025vw;
+}
+#navbar #log-on form i{
+    position: absolute;
+    left: 9.5%;
+    top: 30%;
+    font-size: 1.260vw;
+    color: gray;
+}
+#navbar #log-on form input::placeholder{
+    font-size: 1.025vw;
+    font-weight: 400;
+}
+#navbar #log-on form input:focus{
+    outline: 0;
+}
+#navbar #log-on a{
+    font-size: 1.025vw;
+    font-weight: 600;
+    text-decoration: none;
+    color: #0d0c22;
+}
+#navbar #log-on #log-in{
+    transition: all 0.3s;
+}
+#navbar #log-on #log-in:hover{
+    opacity: 0.7;
+}
+#navbar #log-on a:nth-last-child(1){
+    background: #0d0c22;
+    padding: 1.1vw 1.8vw;
+    border-radius: 200px;
+    color: #ffffff;
+    position: relative;
+}
+.fade-hover-on::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #f8f7f4;
+    top: 0;
+    left: 0;
+    border-radius: 200px;
+    opacity: 0;
+    transition: all 0.3s;
+}
+.fade-hover-on:hover::after{
+    opacity: 0.3;
+}
+/*................. HERO SECTION ...............*/
+#hero{
+    overflow-x: hidden;
+}
+#hero #home-header{
+    width: 100vw;
+    height: 84vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2.9vh 4vw 0px 3vw;
+}
+#home-header #hero-msg{
+    font-family: 'sherif';
+    color: #3d3d4e;
+    font-size: 1.180vw;
+    font-weight: 600;
+    padding: 0.65vw 1.1vw;
+    border-radius: 200px;
+}
+.color-grad{
+    background-image: linear-gradient(to bottom, #ffe882, #ff9558, #ffa9ae,#ff98c1, #bbaaff, #7ed4d0);
+    background-size: 5000% 5000%;
+    background-position: top;
+    animation: color-circle 50s infinite alternate;
+}
+@keyframes color-circle {
+    0%{
+        background-position: top;
+    }
+    100%{
+        background-position: bottom;
+    }    
+}
+#hero h1{
+    font-family: 'sherif';
+    font-size: 5.23vw;
+    font-weight: 400;
+    width: 70%;
+    text-align: center;
+    margin-top: 3vw;
+    color: #0d0c22;
+    line-height: 5.6vw;
+}
+#hero #hero-subheading{
+    font-size: 1.47vw;
+    margin-top: 2.2vw;
+    font-weight: 500;
+}
+#hero #hero-button{
+    width: 13%;
+    height: 11%;
+    border-radius: 200px;
+    background: #0d0c22;
+    position: relative;
+}
+#hero #hero-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #f8f7f4;
+    font-size: 1.025vw;
+    font-weight: 600;
+    margin-top: 2.8vw;
+}
+
+/*............... HERO MARQUE ..............*/
+#hero #hero-marque{
+    width: 267.167vw;
+    height: fit-content;
+    white-space: nowrap;
+    margin-top: 2vh;
+    animation: marque-scroll 70s infinite linear;
+}
+@keyframes marque-scroll {
+    from{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+#hero-marque .container{
+    display: inline-block;
+    width: fit-content;
+    height: 100%;
+    background: #f8f7f4;
+}
+#hero-marque .container .profile-card{
+    display: inline-block;
+    height: 340px;
+    width: 273px;
+    border-radius: 35px;
+    margin-right: 2vw;
+    overflow: hidden;
+    position: relative;
+}
+#hero-marque .profile-card::before{
+    content: '';
+    position: absolute;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgb(0, 0, 0) 60%);
+    opacity: 0.2;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+#hero-marque .profile-card img, video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#hero-marque .overlay{
+    width: 100%;
+    height: fit-content;
+    padding: 1.5vw;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    z-index: 2;
+}
+#hero-marque .overlay div{
+    font-size: 13px;
+    color: #f8f7f4;
+    font-weight: 600;
+}
+#hero-marque .overlay ul{
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+}
+#hero-marque .overlay ul li{
+    list-style: none;
+    padding: 6px 12px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #f8f7f4;
+    border-radius: 200px;
+    border: 1px solid #f8f7f4;
+}
+
+/*........................ HOME FEED SECTION .......................*/
+#page .home-feed{
+    width: 100%;
+    margin-top: 3vw;
+    padding: 5.5vw;
+    background-image: linear-gradient(#f8f7f4, #ffffff 5%);
+}
+.home-feed #heading{
+    font-size: 3.5vw;
+    color: #0d0c22;
+    font-weight: 400;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.home-feed ol{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    gap: 36px;
+    margin-top: 4vw;
+}
+.home-feed ol li{
+    list-style: none;
+    height: 240px;
+    position: relative;
+}
+.home-feed .card{
+    width: 100%;
+    height: 85%;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+.home-feed .card::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(#f8f7f400, rgba(0, 0, 0, 0.445));
+    top: 0;
+    left: 0;
+    opacity: 0.1;
+    z-index: 1;
+}
+.home-feed .card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.home-feed .card .overlay{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 40%;
+    bottom: 0;
+    left: 0;
+    color: #ffffff;
+    font-size: 1.8vw;
+    padding: 0px 1.8vw;
+    font-weight: 700;
+    background-image: linear-gradient(#f8f7f400, rgba(0, 0, 0, 0.486) 100%);
+    opacity: 0;
+    transition: all 0.3s;
+    z-index: 2;
+}
+.home-feed .card .overlay h6{
+    width: 53%;
+    font-weight: 500;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.home-feed .card .overlay i{
+    font-weight: 500;
+    font-size: 1.3vw;
+    height: 2.8vw;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8f7f4;
+    border-radius: 50%;
+    color: #0d0c22;
+    transition: all 0.3s;
+}
+.home-feed .card:hover .overlay{
+    opacity: 1;
+}
+.home-feed .author{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    font-size: 1.025vw;
+    font-weight: 500;
+    align-items: center;
+    justify-content: space-between;
+}
+.home-feed .author img{
+    height: 60%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    object-fit: cover;
+    position: relative;
+}
+.home-feed .author span{
+    font-size: 0.88vw;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    color: #313131;
+}
+.home-feed .author .premium{
+    font-size: 0.75vw;
+    font-weight: 700;
+    padding: 2px 3px;
+    background: rgb(173, 173, 173);
+    color: #f8f7f4;
+    border-radius: 3px;
+    transition: all 0.3s;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.home-feed .author .premium:hover{
+    background: #0d0c22;
+}
+.home-feed .author .like{
+    transition: all 0.3s;
+    cursor: pointer;
+}
+.home-feed .author .like:hover{
+    color: #ff64d1;
+}
+.home-feed .author i{
+    font-size: 1.3vw;
+    color: rgb(173, 173, 173);
+}
