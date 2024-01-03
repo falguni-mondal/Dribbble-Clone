@@ -16,6 +16,9 @@
     box-sizing: border-box;
     font-family: 'mona';
 }
+*::selection{
+    display: none;
+}
 html, body{
     height: 100vh;
     width: 100vw;
@@ -184,8 +187,6 @@ html, body{
     border-radius: 200px;
     background: #0d0c22;
     position: relative;
-}
-#hero #hero-button{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -195,6 +196,7 @@ html, body{
     font-weight: 600;
     margin-top: 2.8vw;
 }
+
 
 /*............... HERO MARQUE ..............*/
 #hero #hero-marque{
@@ -280,7 +282,11 @@ html, body{
     width: 100%;
     margin-top: 3vw;
     padding: 5.5vw;
+    padding-bottom: 10vw;
     background-image: linear-gradient(#f8f7f4, #ffffff 5%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .home-feed #heading{
     font-size: 3.5vw;
@@ -415,4 +421,81 @@ html, body{
 .home-feed .author i{
     font-size: 1.3vw;
     color: rgb(173, 173, 173);
+}
+/*................ HOME FEED BUTTON ..............*/
+.home-feed #button{
+    border-radius: 200px;
+    border: 1px solid #0d0c22;
+    width: 18%;
+    height: 4.2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1vw;
+    font-weight: 600;
+    margin-top: 3.2vw;
+    color: #0d0c22;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+.home-feed #button:hover{
+    border: 1px solid #5e5e5e;
+    color: #5e5e5e;
+}
+
+/*................. FOOTER HEADING ................*/
+.footer-heading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10vw;
+    background: #ffda79;
+}
+.footer-heading h2{
+    font-family: 'sherif';
+    font-size: 4.7vw;
+    width: 42%;
+    font-weight: 400;
+    line-height: 5.3vw;
+}
+.footer-heading #sub-head{
+    width: 52%;
+    font-size: 1.45vw;
+    text-align: center;
+    line-height: 2.6vw;
+    margin-top: 2vw;
+}
+.footer-heading .button{
+    display: flex;
+    gap: 1vw;
+    margin-top: 3vw;
+}
+.footer-heading .button a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f8f7f4;
+    background: #0d0c22;
+    font-size: 1.025vw;
+    font-weight: 600;
+    padding: 1.4vw 1.7vw;
+    border-radius: 200px;
+    position: relative;
+}
+.footer-heading .button #btn2{
+    background: #f8f7f4;
+    color: #0d0c22;
+}
+.footer-heading #link{
+    font-family: 'mona';
+    font-size: 1.4vw;
+    margin-top: 4vw;
+}
+.footer-heading #link a{
+    color: #0d0c22;
+    text-decoration: none;
+    text-decoration: 2px underline;
 }
