@@ -32,7 +32,7 @@ html, body{
 #navbar{
     height: 16%;
     width: 100%;
-    padding: 0px 3vw 0px 3vw;
+    padding: 0px 3vw;
     display: flex;
     align-items: center;
 }
@@ -204,6 +204,8 @@ html, body{
     height: fit-content;
     white-space: nowrap;
     margin-top: 2vh;
+}
+.autoscroll-marque{
     animation: marque-scroll 70s infinite linear;
 }
 @keyframes marque-scroll {
@@ -342,16 +344,16 @@ html, body{
     bottom: 0;
     left: 0;
     color: #ffffff;
-    font-size: 1.8vw;
     padding: 0px 1.8vw;
     font-weight: 700;
-    background-image: linear-gradient(#f8f7f400, rgba(0, 0, 0, 0.486) 100%);
+    background-image: linear-gradient(#f8f7f400, rgba(0, 0, 0, 0.568) 100%);
     opacity: 0;
     transition: all 0.3s;
     z-index: 2;
 }
 .home-feed .card .overlay h6{
     width: 53%;
+    font-size: 17px;
     font-weight: 500;
     text-wrap: nowrap;
     text-overflow: ellipsis;
@@ -359,8 +361,8 @@ html, body{
 }
 .home-feed .card .overlay i{
     font-weight: 500;
-    font-size: 1.3vw;
-    height: 2.8vw;
+    font-size: 17px;
+    height: 39px;
     aspect-ratio: 1;
     display: flex;
     align-items: center;
@@ -377,13 +379,13 @@ html, body{
     width: 100%;
     height: 15%;
     display: flex;
-    font-size: 1.025vw;
+    font-size: 14px;
     font-weight: 500;
     align-items: center;
     justify-content: space-between;
 }
 .home-feed .author img{
-    height: 60%;
+    height: 24px;
     aspect-ratio: 1;
     border-radius: 50%;
     object-fit: cover;
@@ -398,7 +400,7 @@ html, body{
     color: #313131;
 }
 .home-feed .author .premium{
-    font-size: 0.75vw;
+    font-size: 10px;
     font-weight: 700;
     padding: 2px 3px;
     background: rgb(173, 173, 173);
@@ -419,7 +421,7 @@ html, body{
     color: #ff64d1;
 }
 .home-feed .author i{
-    font-size: 1.3vw;
+    font-size: 17px;
     color: rgb(173, 173, 173);
 }
 /*................ HOME FEED BUTTON ..............*/
@@ -431,7 +433,7 @@ html, body{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1vw;
+    font-size: 14px;
     font-weight: 600;
     margin-top: 3.2vw;
     color: #0d0c22;
@@ -450,7 +452,7 @@ html, body{
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding: 10vw;
+    padding: 9vw;
     background: #ffda79;
 }
 .footer-heading h2{
@@ -459,6 +461,7 @@ html, body{
     width: 42%;
     font-weight: 400;
     line-height: 5.3vw;
+    color: #0d0c22;
 }
 .footer-heading #sub-head{
     width: 52%;
@@ -479,7 +482,7 @@ html, body{
     justify-content: center;
     color: #f8f7f4;
     background: #0d0c22;
-    font-size: 1.025vw;
+    font-size: 14px;
     font-weight: 600;
     padding: 1.4vw 1.7vw;
     border-radius: 200px;
@@ -498,4 +501,133 @@ html, body{
     color: #0d0c22;
     text-decoration: none;
     text-decoration: 2px underline;
+}
+/*............... FOOTER MARQUE ...............*/
+#footer-marque{
+    width: 129.1vw;
+    height: fit-content;
+    margin-top: 3vw;
+    animation: marque-scroll 25s infinite linear;
+    transition: all 0.5s;
+}
+#footer-marque:hover{
+    animation-play-state: paused;
+}
+#footer-marque .container{
+    width: fit-content;
+    height: fit-content;
+    padding: 30px 0px;
+    display: flex;
+    gap: 32px;
+}
+#footer-marque .card-container{
+    width: 220px;
+    height: 195px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    cursor: pointer;
+}
+.card-container .feed-card{
+    width: 200px;
+    height: 150px;
+    position: relative;
+}
+.card-container .feed-card:hover .bg{
+    top: -4px;
+    right: -4px;
+    box-shadow: 3px -3px 1px 1px rgb(255, 245, 208);
+}
+.card-container .feed-card:hover #bg2{
+    top: -10px;
+    right: -10px;
+    box-shadow: 4px -4px 1px 1px rgb(214, 217, 255);
+}
+.feed-card img{
+    border-radius: 5px;
+    position: relative;
+    z-index: 3;
+}
+.feed-card .bg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    background: #f8f7f4;
+    z-index: 2;
+    top: -3px;
+    right: -3px;
+    box-shadow: 2px -2px 1px 1px rgb(255, 245, 208);
+    transition: all 0.3s;
+}
+.feed-card #bg2{
+    top: -8px;
+    right: -8px;
+    box-shadow: 2px -2px 1px 1px rgb(214, 217, 255);
+    z-index: 1;
+    border-radius: 8px;
+}
+.card-container .name{
+    width: 100%;
+    height: 45px;
+    display: flex;
+    align-items: end;
+    font-size: 14px;
+    font-weight: 500;
+    color: #0d0c22;
+}
+
+/*.................. FOOTER ..................*/
+#footer{
+    padding: 3.5vw 5vw;
+    width: 100%;
+}
+.ftr-nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#ftr-nav1 img{
+    width: 104px;
+}
+#links ul{
+    display: flex;
+    gap: 3.5vw;
+}
+#links ul li{
+    list-style: none;
+}
+#links ul li a{
+    text-decoration: none;
+    color: #0d0c22;
+    font-size: 1.025vw;
+    font-weight: 600;
+}
+#ftr-nav1 #socials{
+    display: flex;
+    gap: 1vw;
+}
+#ftr-nav1 #socials a{
+    text-decoration: none;
+    color: #0d0c22;
+    font-size: 1.8vw;
+}
+
+#ftr-nav2{
+    margin-top: 80px;
+}
+#ftr-nav2 ul{
+    display: flex;
+    gap: 1.5vw;
+}
+#ftr-nav2 ul li{
+    list-style: none;
+    font-size: 1.025vw;
+    font-weight: 400;
+    color: #5e5e5e;
+}
+#ftr-nav2 ul li a{
+    text-decoration: none;
+    color: #5e5e5e;
 }
