@@ -929,7 +929,7 @@ video {
         width: 100%;
         margin-top: 32px;
         padding: 5.5vw;
-        padding-bottom: 4vh;
+        padding-bottom: 18vh;
         padding-top: 10vh;
         background-image: linear-gradient(#f8f7f4, #ffffff 1%);
         display: flex;
@@ -950,6 +950,10 @@ video {
     .home-feed .card:hover .overlay {
         opacity: 0;
     }
+    .home-feed #button {
+        border: 2px solid #0d0c22;
+    }
+    
 
     /*................. FOOTER HEADING ................*/
     .footer-heading {
